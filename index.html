@@ -71,6 +71,29 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
+          <script>
+      function refreshData(){
+          var xhr = new XMLHttpRequest();
+          // register the event handler
+          var start_time = new Date().getTime();
+          xhr.open("GET","/sitemap.json",true);
+          var DEBUG = true;
+          xhr.addEventListener('load',function(){
+              if(xhr.status === 200 || xhr.status == 0){
+                data = JSON.parse(xhr.response);
+                var request_time = new Date().getTime() - start_time;
+                if (DEBUG) console.log(request_time);
+                if (JSON.stringify(last_data) != JSON.stringify(data)) {
+                    last_data = data;
+                    if (DEBUG) console.log("We got data: ", data);
+                }
+              }
+          },function(ex){
+              alert("oops, some problem occured: " + ex);
+          });
+          // perform the work
+          xhr.send();
+      }
+    </script>
   </body>
 </html>
