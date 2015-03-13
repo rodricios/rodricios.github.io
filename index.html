@@ -99,7 +99,7 @@
                 if (DEBUG) console.log(request_time);
                 if (DEBUG) console.log("We got data: ", data);
                 
-                var sitemap = document.getElementById('sitemap')[0];
+                var sitemap = document.getElementById('sitemap');
                 sitemap.innerHTML += sitemap.innerHTML + json_to_html_ul(data)
                 
               }
