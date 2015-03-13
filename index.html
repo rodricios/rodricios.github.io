@@ -60,18 +60,29 @@
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-              <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-59748564-2");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
-          <script>
+    <script>
+      
+      function json_to_html_ul(d, tag){
+        var tag = "<ul>"
+        
+        /*http://stackoverflow.com/questions/684672/loop-through-javascript-object*/
+        for (var key in d) {
+          if (d.hasOwnProperty(key)) {
+              
+            tag += "<li>" + key
+            
+            if (typeof d[key] == typeof {}){
+                tag += json_to_html_ul(d[key],"") + "</li>"
+            }
+            else{
+                tag += "</li>"
+            }
+          }
+        }
+        tag += "</ul>"
+        return tag
+      }
+      
       function refreshData(){
           var xhr = new XMLHttpRequest();
           // register the event handler
@@ -82,18 +93,21 @@
               if(xhr.status === 200 || xhr.status == 0){
                 data = JSON.parse(xhr.response);
                 var request_time = new Date().getTime() - start_time;
+                
                 if (DEBUG) console.log(request_time);
-                if (JSON.stringify(last_data) != JSON.stringify(data)) {
-                    last_data = data;
-                    if (DEBUG) console.log("We got data: ", data);
-                }
+                if (DEBUG) console.log("We got data: ", data);
+                
+                var sitemap = document.getElementById('sitemap')[0];
+                sitemap.innerHTML += sitemap.innerHTML + json_to_html_ul(data)
+                
               }
           },function(ex){
               alert("oops, some problem occured: " + ex);
           });
           // perform the work
           xhr.send();
-      }
+      }();
+      
     </script>
   </body>
 </html>
