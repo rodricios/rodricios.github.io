@@ -1,115 +1,155 @@
 <!doctype html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>rodri.cios by rodricios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a blog page with a list of posts.">
+    <title>rodrigo palacios</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>rodri.cios</h1>
-        <p>Let&#39;s not complicate things</p>
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+    <!--<![endif]-->
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/blogdown.css">
+    <!--<![endif]-->
+    </head>
+    <body>
+        <div id="layout" class="pure-g">
+            <div class="sidebar pure-u-1 pure-u-md-1-4">
+                <div class="header">
+                    <h1 class="brand-title"><a href="/">rodri.cios</a></h1>
+                    <h2 class="brand-tagline"></h2>
+                    <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item">
+                                <a class="pure-button" href="/posts">Posts</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="pure-button" href="/projects">Projecs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="pure-button" target="_blank" href="/files/CV-RodrigoPalacios.pdf">CV</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="content pure-u-1 pure-u-md-3-4">
+                <div>
+                    <!-- A wrapper for all the blog posts -->
+                    <div class="posts">
+                        <h1 class="content-subhead"></h1>
 
+                        <!-- A single blog post -->
+                        <section class="post">
+                            <header class="post-header">
+                                <!--<img class="post-avatar" alt="" height="48" width="48" src="">-->
 
-        <p class="view"><a href="https://github.com/rodricios">View My GitHub Profile</a></p>
-        <nav id="sitemap">
-          <a href="#" class="fa fa-bars"></a>
-        </nav>
-      </header>
-      <section>
-        <h3>
-<a id="hi-im-rodrigo" class="anchor" href="#hi-im-rodrigo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hi, I'm Rodrigo</h3>
+                                <h2 class="post-title">Welcome!</h2>
 
-<p>You can contact me either by email: <a href="mailto:rodrigopala91@gmail.com">rodrigopala91@gmail.com</a></p>
+                                <p class="post-meta">
+                                    <!--By <a href="#" class="post-author">Rodrigo</a> under-->
+                                    <!--<a class="post-category post-category-design" href="#">CSS</a>-->
+                                    <!--<a class="post-category post-category-pure" href="#">Pure</a>-->
+                                </p>
+                            </header>
+                            <div class="post-description">
+                                <p>
+                                    My full name is Rodrigo Palacios. A mouthful, I know, so I'm o.k. with
+                                    just <i>Rod</i>. I'm an undergraduate at California
+                                    State University, Fresno. Besides breathing the wonderful Fresnan air,
+                                    I enjoy spending my time solving seemingly hard problems. What problems
+                                    have I taken a whack at?
+                                </p>
+                                <ul>
+                                    <li>
+                                        The <i>Main article from a website. I want that, and only that!</i> problem
+                                        <sup><a href="#1">1</a></sup> (<a href="https://github.com/rodricios/eatiht">Link to project</a>)
+                                    </li>
+                                    <li>
+                                        The <i>Reverse engineering Flipboard's autosummary feature from a blog post</i>
+                                         problem<sup><a href="#2">2</a></sup> (<a href="https://gist.github.com/rodricios/fee45381356c8fb36004">Link</a>)
+                                    </li>
+                                    <li>
+                                        The <i>I was texting my pal, "Yo nigga", and my iPhone autocompleted/corrected
+                                        it to <a target="_blank" href="https://www.youtube.com/watch?v=ARhgeboDS3Q">"niggardly"</a> - anyways, how does that work?</i> problem<sup>
+                                            <a href="#3">3</a></sup> (<a href="https://github.com/rodricios/autocomplete">Link</a>)
+                                    </li>
+                                    <li>
+                                        The <i>See all those tabular data structures on websites? I want
+                                        those!</i> problem<sup><a href="#4">4</a></sup> (<a href="https://github.com/datalib/libextract">Link</a>)
+                                    </li>
+                                </ul>
+                                <p>
+                                    Despite my surprise that companies seem to not care about these sorts of
+                                    accomplishments, which I do include in my <a target="_blank" href="/files/CV-RodrigoPalacios.pdf">CV</a> in a more "professional" tone,
+                                    I'm still an optimist when it comes to the Internet. 
+                                </p>
+                                <p>
+                                    Through mediums like reddit, Quora, and GitHub, I've been able to reach 
+                                    the minds of roughly 80 or so thousands of people (including revisits;
+                                    not including revisits I'd say it's somewhere around 40 thousand<sup><a href="#5">5</a></sup>).
+                                </p>
+                                <p>
+                                    I'm a big proponent for and creator of <a href="https://github.com/rodricios/autocomplete#explain-like-im-5">
+                                    experimental, illustrative educational materials</a>. I'm also a big fan
+                                    of research collaborations<sup><a href="#6">6</a></sup>, especially if
+                                    they arise from <a href="http://www.reddit.com/r/compsci/comments/2ppyot/just_made_what_i_consider_my_first_algorithm_it/">
+                                        reddit posts</a>.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Next section -->
+                    <!--<div class="posts">
+                        <h1 class="content-subhead">Recent Posts</h1>
+                    </div>-->
+                    <div class="pure-g footnotes">
+                        <div class="pure-u-1">
+                            <sup id="1">1. Making simple assumptions about websites, this tiny unsupervised classification
+                                 algorithm does a pretty good job at article extraction (this is an empirically supported statement).</sup>
+                        </div>
+                        <div class="pure-u-1">
+                            <sup id="2">2. From this <a href="http://engineering.flipboard.com/2014/10/summarization/">Flipboard blogpost</a>,
+                                 I decompose, reference, and reconstruct a popular automatic-summarization algorithm, 
+                                 <a href="http://dl.acm.org/citation.cfm?id=1622501">LexRank</a>; view this little study
+                                 <a href="https://gist.github.com/rodricios/fee45381356c8fb36004">here</a>.
+                            </sup>
+                        </div>
+                        <div class="pure-u-1">
+                            <sup id="3">3. I try to explain introductory AI material using words anyone will understand (no nomenclature).
+                                 This project was inspired by and dedicated to my 4 younger siblings who I hope one day will be future John Connors.</sup>
+                        </div>
+                        <div class="pure-u-1">
+                            <sup id="4">4. I extrapolate and generalize the first extraction algorithm mentioned above; 
+                                this allows for extracting "table-like" sections from websites.</sup>
+                        </div>
+                        <div class="pure-u-1">
+                            <sup id="5">5. Numbers estimated from GitHub's Google-Analytics-powered traffic graphs.</sup>
+                        </div>
+                        <div class="pure-u-1">
+                            <sup id="6">6. Currently collaborating with University of Notre Dame's Tim Weninger, Ph.D.</sup>
+                        </div>
+                    </div>
+                    <div class="footer">
 
-<p>or by twitter: <a href="https://twitter.com/rodricios">@rodricios</a>. </p>
-
-<h4>
-<a id="brief" class="anchor" href="#brief" aria-hidden="true"><span class="octicon octicon-link"></span></a>Brief</h4>
-
-<p>I, like probably many of you, want to and like to get things done. If you're hiring, or would like an extra competent mind (my opinion) to collaborate with, to try and solve some problem you or your team are having (let's assume this is a catch-all statement where "problem" can be almost anything), or simply want to exchange thoughts, get a hold of me via one of the above mentioned methods. </p>
-
-<h4>
-<a id="projects" class="anchor" href="#projects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Projects</h4>
-
-<p><a href="https://github.com/rodricios/eatiht">eatiht</a> - An unsupervised content classifier; great for extracting articles from web pages. Demo can be found in link. </p>
-
-<p><a href="https://github.com/rodricios/autocomplete">autocomplete</a> - An adult and kid friendly exercise in creating a predictive program. I try to express the intuition behind <a href="http://en.wikipedia.org/wiki/Markov_chain">Markov chains</a> by thought-experimenting my way towards the autocomplete/query-suggester akin to iPhone's, Google's. </p>
-
-<p><a href="https://github.com/rodricios/crawl-to-the-future">Backtesting content extractors</a> - A repo containing a manually/systematically curated test set of web pages from the years 2000, 2005, 2010 and 2015 (thanks to <a href="https://archive.org/web/">Internet Archive's WayBack Machine</a>. This dataset is being used for further testing and opinion-making. Currently in progress and with the generous help of <a href="http://www3.nd.edu/%7Etweninge/">Tim Weninger</a>. </p>
-
-<h4>
-<a id="my-passions" class="anchor" href="#my-passions" aria-hidden="true"><span class="octicon octicon-link"></span></a>My passions</h4>
-
-<p>I'm "passionate" about simplified solutions for both ordinary and non-ordinary problems. This "passion" sometimes spills over to the realm of what the educated world calls "machine learning." In cleaning up this "passion" spillover, I found a new passion: "simplified" "machine learning". </p>
-
-<p>I apologize for my indiscriminate use of double quotes. </p>
-
-<h4>
-<a id="my-likes" class="anchor" href="#my-likes" aria-hidden="true"><span class="octicon octicon-link"></span></a>My likes</h4>
-
-<p>I enjoy mild to moderately mild deadpan humor. </p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script>
-      
-      function json_to_html_ul(d, tag){
-        var tag = "<ul>"
-        
-        /*http://stackoverflow.com/questions/684672/loop-through-javascript-object*/
-        for (var key in d) {
-          if (d.hasOwnProperty(key)) {
-              
-            tag += "<li>" + key
-            
-            if (typeof d[key] == typeof {}){
-                tag += json_to_html_ul(d[key],"") + "</li>"
-            }
-            else{
-                tag += "</li>"
-            }
-          }
-        }
-        tag += "</ul>"
-        return tag
-      }
-      
-      function refreshData(){
-          var xhr = new XMLHttpRequest();
-          // register the event handler
-          var start_time = new Date().getTime();
-          xhr.open("GET","/sitemap.json",true);
-          var DEBUG = true;
-          xhr.addEventListener('load',function(){
-              if(xhr.status === 200 || xhr.status == 0){
-                data = JSON.parse(xhr.response);
-                var request_time = new Date().getTime() - start_time;
-                
-                if (DEBUG) console.log(request_time);
-                if (DEBUG) console.log("We got data: ", data);
-                
-                var sitemap = document.getElementById('sitemap');
-                sitemap.innerHTML += sitemap.innerHTML + json_to_html_ul(data)
-                
-              }
-          },function(ex){
-              alert("oops, some problem occured: " + ex);
-          });
-          // perform the work
-          xhr.send();
-      };
-      refreshData();
-    </script>
-  </body>
+                        <div class="pure-menu pure-menu-horizontal">
+                            <ul>
+                                <li class="pure-menu-item"><a href="/" class="pure-menu-link">Home</a></li>
+                                <li class="pure-menu-item"><a href="http://twitter.com/rodricios/" class="pure-menu-link">Twitter</a></li>
+                                <li class="pure-menu-item"><a href="http://github.com/rodricios/" class="pure-menu-link">GitHub</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>
