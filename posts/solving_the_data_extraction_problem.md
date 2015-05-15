@@ -88,7 +88,7 @@ nothing more than a stylized set of multi-attribute lists or tables.
 Let's get a better picture of what Tim means:
 
 <figure markdown="1"> 
-	![reddit tables](http://i.imgur.com/OsA7Iiyh.png) 
+	![reddit tables](http://i.imgur.com/OsA7Iiyl.png) 
 	<figcaption markdown="1"> 
 		Websites are like a series of tables...
 	</figcaption> 
