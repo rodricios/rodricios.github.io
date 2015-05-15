@@ -129,8 +129,8 @@ Visually, data is presented as rows or columns (usually). Structurally,
 data is presented as a collection (__parent element__) of __children 
 elements__.*
 
-Some of you guys/gals may have asked *This definition is ambiguous. 
-We're practically talking about every element in an HTML tree.*
+Some of you guys and gals may be thinking, "This definition is ambiguous. 
+We're practically talking about every element in an HTML tree."
 
 Yup.
 
