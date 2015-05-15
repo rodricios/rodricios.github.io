@@ -343,7 +343,7 @@ is a big moment of *Ohhhhh... It's been done before, and here it is:*
 problem. We must identify points i and j such that we maximize the 
 number of tag tokens below i and above j, while simultaneously maximizing 
 the number of text tokens between i and j. The text is only extracted 
-between i and j. 
+between i and j. *From page 3 of __Fact or fiction__*
 
 I waited until I started gathering resources for this post; I read Yacoby's 
 suggestion once again; I looked for and found the paper; I ``ctrl-F``'ed;
