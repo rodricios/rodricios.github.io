@@ -1,4 +1,4 @@
-Solving the Data Extraction Problem
+Solving the Data Extraction Problem in 10 lines
 ===
 
 #####By Rodrigo Palacios, follow me on [twitter](https://twitter.com/rodricios), and [github](https://github.com/rodricios)
@@ -85,7 +85,7 @@ nothing more than a stylized set of multi-attribute lists or tables.
 
 ## *A wild problem appears!*
 
-Let's get a better picture of what Tim means:
+Let's get a better picture of what Tim is saying:
 
 <figure markdown="1"> 
 	![reddit tables](http://i.imgur.com/OsA7Iiyl.png) 
@@ -116,7 +116,7 @@ Since we're dealing with HTML, let's have a look at the underlying markup:
 Looking at the above pictures, one thing should be clear: although
 ``<table>``'s are the epitome of **tabular data**, there are no 
 ``<table>``'s in the above HTML. But despite the lack of tables, it 
-should be clear that there is tabular data on the front page of Reddit.
+should also be clear that there is tabular data on the front page of Reddit.
 
 So what do? 
 
@@ -136,8 +136,8 @@ Yup.
 
 But now throw the phrase *frequently occuring* into the definition:
 
-*Structurally, data is presented as a collection (__parent element__)
-of __frequently occurring__ __children elements__.*
+*Structurally, data is presented as a collection (parent element)
+of __frequently occurring__ children elements.*
 
 To reiterate clearly (hopefully):
 

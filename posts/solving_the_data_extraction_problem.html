@@ -70,7 +70,7 @@
 
     <div class="post-description">
         <section class="post">
-            <h1>Solving the Data Extraction Problem</h1>
+            <h1>Solving the Data Extraction Problem in 10 lines</h1>
 <h5>By Rodrigo Palacios, follow me on <a href="https://twitter.com/rodricios">twitter</a>, and <a href="https://github.com/rodricios">github</a></h5>
 <p>A Python implementation of this work can be found on <a href="https://github.com/datalib/libextract">GitHub</a>.</p>
 <hr />
@@ -142,7 +142,7 @@ username, and a bunch of other things. The front page of reddit is
 nothing more than a stylized set of multi-attribute lists or tables. </p>
 </blockquote>
 <h2><em>A wild problem appears!</em></h2>
-<p>Let's get a better picture of what Tim means:</p>
+<p>Let's get a better picture of what Tim is saying:</p>
 <figure>
 <p><img alt="reddit tables" src="http://i.imgur.com/OsA7Iiyl.png" /> 
     <figcaption markdown="1"> 
@@ -166,7 +166,7 @@ nothing more than a stylized set of multi-attribute lists or tables. </p>
 <p>Looking at the above pictures, one thing should be clear: although
 <code>&lt;table&gt;</code>'s are the epitome of <strong>tabular data</strong>, there are no 
 <code>&lt;table&gt;</code>'s in the above HTML. But despite the lack of tables, it 
-should be clear that there is tabular data on the front page of Reddit.</p>
+should also be clear that there is tabular data on the front page of Reddit.</p>
 <p>So what do? </p>
 <h2>Deconstruction</h2>
 <p>Clearly define what the problem is: </p>
@@ -178,8 +178,8 @@ elements</strong>.</em></p>
 We're practically talking about every element in an HTML tree.</em></p>
 <p>Yup.</p>
 <p>But now throw the phrase <em>frequently occuring</em> into the definition:</p>
-<p><em>Structurally, data is presented as a collection (<strong>parent element</strong>)
-of <strong>frequently occurring</strong> <strong>children elements</strong>.</em></p>
+<p><em>Structurally, data is presented as a collection (parent element)
+of <strong>frequently occurring</strong> children elements.</em></p>
 <p>To reiterate clearly (hopefully):</p>
 <ol>
 <li>
