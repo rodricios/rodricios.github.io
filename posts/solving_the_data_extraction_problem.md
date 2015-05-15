@@ -41,8 +41,7 @@ In Python:
 
 	# This line, one could say, is what wraps this data-extraction 
 	# algorithm up as a maximization/optimization algorithm
-	parents_with_children_counts.sort(# x[1].most_common(1) gets the most frequent element
-                                      # x[1].most_common(1)[0][1] gets the frequency value
+	parents_with_children_counts.sort(# x[1].most_common(1)[0][1] gets the frequency value
                                       key=lambda x: x[1].most_common(1)[0][1], 
                                       reverse=True)
 ```
@@ -212,15 +211,13 @@ repetitive elements*
 	#  (<Element div at 0x5c379a8>, Counter({'span': 1}))]
 ```
 
-Finally, let's sort our list of parent, child counter by the *frequency* 
+Finally, let's sort our list of parent-child counter pairs by the *frequency* 
 of the most common element in each *child counter*.
 
 ```python 
 	# This line, one could say, is what wraps this data-extraction 
 	# algorithm as a maximization/optimization algorithm
-	parents_with_children_counts.sort(# x[1] is the Counter object
-                                      # x[1].most_common(1) gets the most frequent element
-                                      # x[1].most_common(1)[0][1] gets the frequency value
+	parents_with_children_counts.sort(# x[1].most_common(1)[0][1] gets the frequency value
                                       key=lambda x: x[1].most_common(1)[0][1], 
                                       reverse=True)
 

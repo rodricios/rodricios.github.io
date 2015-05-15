@@ -104,8 +104,7 @@ of children relative to the root node in the subtree.</p>
 
     <span class="c"># This line, one could say, is what wraps this data-extraction </span>
     <span class="c"># algorithm up as a maximization/optimization algorithm</span>
-    <span class="n">parents_with_children_counts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="c"># x[1].most_common(1) gets the most frequent element</span>
-                                      <span class="c"># x[1].most_common(1)[0][1] gets the frequency value</span>
+    <span class="n">parents_with_children_counts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="c"># x[1].most_common(1)[0][1] gets the frequency value</span>
                                       <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> 
                                       <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
@@ -248,13 +247,11 @@ repetitive elements</em></p>
 </pre></div>
 
 
-<p>Finally, let's sort our list of parent, child counter by the <em>frequency</em> 
+<p>Finally, let's sort our list of parent-child counter pairs by the <em>frequency</em> 
 of the most common element in each <em>child counter</em>.</p>
 <div class="codehilite"><pre>    <span class="c"># This line, one could say, is what wraps this data-extraction </span>
     <span class="c"># algorithm as a maximization/optimization algorithm</span>
-    <span class="n">parents_with_children_counts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="c"># x[1] is the Counter object</span>
-                                      <span class="c"># x[1].most_common(1) gets the most frequent element</span>
-                                      <span class="c"># x[1].most_common(1)[0][1] gets the frequency value</span>
+    <span class="n">parents_with_children_counts</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="c"># x[1].most_common(1)[0][1] gets the frequency value</span>
                                       <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">most_common</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> 
                                       <span class="n">reverse</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 
