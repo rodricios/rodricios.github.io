@@ -589,9 +589,22 @@ Here they describe some examples:
 > ... semi-structured web page domains include books for sale,
 properties for rent, or job offers.
 
-Not to bash on the merits of the above research, none of those 
+Not to bash on the merits of the above research, but none of those 
 solutions are easily available for the rest of us. 
 
+
+<script type="text/javascript">
+var addthis_share = addthis_share || {}
+addthis_share = {
+	passthrough : {
+		twitter: {
+			via: "rodricios",
+			text: "Solving the data extraction problem"
+		}
+	}
+}
+
+</script>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55562a0c27b23012" async="async"></script>
 
