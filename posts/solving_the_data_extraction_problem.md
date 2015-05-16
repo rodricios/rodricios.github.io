@@ -8,7 +8,7 @@ A Python implementation of this work can be found on [GitHub](https://github.com
 ---
 
 <figure markdown="1"> 
-	![Data extraction at it's root.](http://i.imgur.com/Xfb8zYEl.jpg?2 "Maybe here, no, here? No...") 
+	![Data extraction at it's root.](https://i.imgur.com/Xfb8zYEl.jpg?2 "Maybe here, no, here? No...") 
 <figcaption markdown="1"> 
 	Back then, extracting data was the job of only one person, and that's him right there.
 </figcaption>
@@ -110,7 +110,7 @@ nothing more than a stylized set of multi-attribute lists or tables.
 Let's get a better picture of what Tim is saying:
 
 <figure markdown="1"> 
-	![reddit tables](http://i.imgur.com/OsA7Iiyl.png) 
+	![reddit tables](https://i.imgur.com/OsA7Iiyl.png) 
 	<figcaption markdown="1"> 
 		Websites are like a series of tables...
 	</figcaption> 
@@ -121,7 +121,7 @@ What's highlighted in red is what is meant by *structured* or *tabular data*.
 Since we're dealing with HTML, let's have a look at the underlying markup: 
 
 <figure markdown="1"> 
-	![subreddits](http://i.imgur.com/d3cFlB8l.png) 
+	![subreddits](https://i.imgur.com/d3cFlB8l.png) 
 	<figcaption markdown="1"> 
 		subreddits - there's a lot of ``li``'s 
 	</figcaption> 
@@ -129,7 +129,7 @@ Since we're dealing with HTML, let's have a look at the underlying markup:
 
 
 <figure markdown="1"> 
-	![top posts](http://i.imgur.com/78rNdf4l.png) 
+	![top posts](https://i.imgur.com/78rNdf4l.png) 
 	<figcaption markdown="1"> 
 		top posts - there's a lot of ``div``'s 
 	</figcaption>
@@ -271,7 +271,7 @@ elements' children:
 So where's that coming from?
 
 <figure markdown="1"> 
-	![Hidden list of subreddits](http://i.imgur.com/s7W7R4Bl.png) 
+	![Hidden list of subreddits](https://i.imgur.com/s7W7R4Bl.png) 
 	<figcaption markdown="1"> 
 		Here's where. It's the *MY SUBREDDITS* button.
 	</figcaption>
@@ -431,7 +431,7 @@ results first hand (all but diffbot have url-reachable demos).
 #### Diffbot
 
 <figure markdown="1"> 
-	![AOL wiki - diffbot](http://i.imgur.com/MzV1brol.png) 
+	![AOL wiki - diffbot](https://i.imgur.com/MzV1brol.png) 
 	<figcaption markdown="1"> 
 		Ey! They extracted the text!
 	</figcaption>
@@ -440,7 +440,7 @@ results first hand (all but diffbot have url-reachable demos).
 #### import.io
 
 <figure markdown="1"> 
-	![AOL wiki - import.io](http://i.imgur.com/TqHjIxNl.png) 
+	![AOL wiki - import.io](https://i.imgur.com/TqHjIxNl.png) 
 	<figcaption markdown="1"> 
 		[Test it out.](https://magic.import.io/?site=http:%2F%2Fen.wikipedia.org%2Fwiki%2FAOL)
 		They managed to extract the references at the bottom of the article - but no article.
@@ -450,7 +450,7 @@ results first hand (all but diffbot have url-reachable demos).
 #### embed.ly
 
 <figure markdown="1"> 
-	![AOL wiki - embed.ly](http://i.imgur.com/7sXC0p6l.png) 
+	![AOL wiki - embed.ly](https://i.imgur.com/7sXC0p6l.png) 
 	<figcaption markdown="1"> 
 		[Test it out.](http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAOL)
 		They provide some pretty useful databites, but not the main content :(
@@ -467,7 +467,7 @@ to look ugly.
 Best result: 
 
 <figure markdown="1"> 	
-	![AOL wiki - libextract](http://i.imgur.com/sQ5WbCZl.png) 
+	![AOL wiki - libextract](https://i.imgur.com/sQ5WbCZl.png) 
 	<figcaption markdown="1"> 
 		No style is the new style. Here we've extract the references.
 	</figcaption>
@@ -476,7 +476,7 @@ Best result:
 Second best result:
 
 <figure markdown="1"> 
-	![AOL wiki - libextract](http://i.imgur.com/PTHYH2rl.png) 
+	![AOL wiki - libextract](https://i.imgur.com/PTHYH2rl.png) 
 	<figcaption markdown="1"> 
 		Here you can see we've extacted the main body of the wiki page. 
 		It's clear how awesome it would be to have post-processing, data-cleaning
@@ -491,7 +491,7 @@ Second best result:
 
 #### import.io
 <figure markdown="1"> 
-	![r/aww - import.io](http://i.imgur.com/f6Qzi6Ll.png) 
+	![r/aww - import.io](https://i.imgur.com/f6Qzi6Ll.png) 
 	<figcaption markdown="1">  
 		[Test it out.](https://magic.import.io/?site=http:%2F%2Fwww.reddit.com%2Fr%2Faww)
 		Import.io clearly has the upper hand. They elegantly clean the data into a tabular format.
@@ -501,7 +501,7 @@ Second best result:
 #### Diffbot
 
 <figure markdown="1"> 
-	![r/aww - diffbot](http://i.imgur.com/4b3FBojl.png) 
+	![r/aww - diffbot](https://i.imgur.com/4b3FBojl.png) 
 	<figcaption markdown="1"> 
 		Diffbot results are similar to import.io's, minus the fancy styling.
 	</figcaption>
@@ -510,7 +510,7 @@ Second best result:
 #### embed.ly
 
 <figure markdown="1"> 
-	![r/aww - embed.ly](http://i.imgur.com/G3tpLnIl.png) 
+	![r/aww - embed.ly](https://i.imgur.com/G3tpLnIl.png) 
 	<figcaption markdown="1"> 
 		[Test it out.](http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fwww.reddit.com%2Fr%2Faww)
 		Embed.ly extracts the images fine, but nothing close to tabular data.
@@ -522,7 +522,7 @@ Second best result:
 Second best result: 
 
 <figure markdown="1"> 
-	![r/aww - libextract](http://i.imgur.com/vLxPJiyl.png) 
+	![r/aww - libextract](https://i.imgur.com/vLxPJiyl.png) 
 	<figcaption markdown="1"> 
 		Like Diffbot and import.io's but absolutely no styling. 
 		I never said it would look pretty.
@@ -538,7 +538,7 @@ The top result is the top bar subreddits. No point in showing that.
 #### embed.ly
 
 <figure markdown="1"> 
-	![nytimes - embed.ly](http://i.imgur.com/BV4C6Cyl.png) 
+	![nytimes - embed.ly](https://i.imgur.com/BV4C6Cyl.png) 
 	<figcaption markdown="1"> 
 		[Test it out.](http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html)
 		Embed.ly wins this one (at least in terms of presentation), as its "cards" are something not seen in other the other extractors.
@@ -548,7 +548,7 @@ The top result is the top bar subreddits. No point in showing that.
 #### Diffbot
 
 <figure markdown="1"> 
-	![nytimes - diffbot](http://i.imgur.com/uPMKocyl.png) 
+	![nytimes - diffbot](https://i.imgur.com/uPMKocyl.png) 
 	<figcaption markdown="1"> 
 		Diffbot handles this one well. 
 	</figcaption>
@@ -556,7 +556,7 @@ The top result is the top bar subreddits. No point in showing that.
 
 #### import.io
 <figure markdown="1"> 
-	![nytimes - import.io](http://i.imgur.com/2hFNLeKl.png) 
+	![nytimes - import.io](https://i.imgur.com/2hFNLeKl.png) 
 	<figcaption markdown="1"> 
 		[Test it out.](https://magic.import.io/?site=http:%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html)
 		Import.io is like, *meh, just another website for me*.
@@ -567,7 +567,7 @@ The top result is the top bar subreddits. No point in showing that.
 
 
 <figure markdown="1"> 
-	![nytimes - libextract](http://i.imgur.com/FsWpOJ5l.png) 
+	![nytimes - libextract](https://i.imgur.com/FsWpOJ5l.png) 
 	<figcaption markdown="1"> 
 		That's it, data cleaning (and styling) is libextract's next feature.
 	</figcaption>
