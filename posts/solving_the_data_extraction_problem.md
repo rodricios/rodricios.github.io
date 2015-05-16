@@ -10,7 +10,7 @@ A Python implementation of this work can be found on [GitHub](https://github.com
 <figure markdown="1"> 
 	![Data extraction at it's root.](http://i.imgur.com/Xfb8zYEl.jpg?2 "Maybe here, no, here? No...") 
 <figcaption markdown="1"> 
-	*In which one of these books did I leave my favorite bookmark?*, asked Ted.
+	Back then, extracting data was the job of only one person, and that's him right there.
 </figcaption>
 </figure>
 
@@ -24,7 +24,7 @@ download HTML, parse HTML, open dev tools, flip back-and-forth between browser a
 console, debug your [XPath](http://en.wikipedia.org/wiki/XPath) expressions, etc. 
 
 On the other hand, data extraction via web scraping has seemlessly, and often elegantly,
-found its way into many larger projects ([Apache Nutch](http://nutch.apache.org/) includes [Tika](http://tika.apache.org/), 
+found its way into larger projects ([Apache Nutch](http://nutch.apache.org/) includes [Tika](http://tika.apache.org/), 
 [Scrapy](http://scrapy.org/) with its hybrid scraping/crawling architecture). Needless to
 say, they're designed to give you - the developer, the data scientist, the hacker, the
 one with time to spare - a lot of control... But to a fault. Oh, and they give you XPath 
