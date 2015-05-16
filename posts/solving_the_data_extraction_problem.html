@@ -74,9 +74,29 @@
 <h5>By Rodrigo Palacios, follow me on <a href="https://twitter.com/rodricios">twitter</a>, and <a href="https://github.com/rodricios">github</a></h5>
 <p>A Python implementation of this work can be found on <a href="https://github.com/datalib/libextract">GitHub</a>.</p>
 <hr />
-<p>Yes, the clickbait title was unashamedely intentional. No, I'm not 
-formally solving anything (my apologies to all the formal-proof-loving 
-people I've mislead into my post). Yes, there's an algorithm.</p>
+<figure> 
+![Data extraction at it's root.](http://i.imgur.com/Xfb8zYE.jpg?2 "Maybe I'll find what I need here, no, maybe here?") 
+<figcaption> 
+    Extracting data has never been easy.
+</figcaption>
+</figure>
+
+<p>In the grand scheme of things, extracting data from the web is a small step in a 
+much larger objective. But in the micro, <em>data extraction</em> appears to us as a problem
+that has no real definitive solution, a sort of <em>dirty job</em> - how often is the task
+relegated as that of "scraping" the web?</p>
+<p>Just think about how many times you've ran into this type of web-scraping tutorial: 
+download HTML, parse HTML, open dev tools, flip back-and-forth between browser and 
+console, debug your <a href="http://en.wikipedia.org/wiki/XPath">XPath</a> expressions, etc. </p>
+<p>On the other hand, data extraction via web scraping has seemlessly found its way into
+many larger projects (<a href="http://nutch.apache.org/">Apache Nutch</a> includes <a href="http://tika.apache.org/">Tika</a>, 
+<a href="http://scrapy.org/">Scrapy</a> with its hybrid scraping/crawling architecture). Needless to
+say, they're designed to give you - the developer, the data scientist, the hacker, the
+one with time to spare - a lot of control, to a fault. Oh, and they give you XPath 
+selection tutorials (<a href="http://tika.apache.org/1.8/examples.html#Fetching_just_certain_bits_of_the_XHTML">[1]</a> 
+<a href="http://doc.scrapy.org/en/0.24/intro/tutorial.html?highlight=data%20extraction#extracting-items">[2]</a>).</p>
+<p>In this post, I present a solution to the data extraction problem. It's 
+short, it's sweet, and it leaves much room for improvement. Enjoy :) </p>
 <h2><em>The algorithm</em></h2>
 <p>In not-so-plain words:</p>
 <blockquote>
