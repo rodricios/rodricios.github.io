@@ -92,7 +92,7 @@ I'm even tackling this problem.
 
 About 4 months ago, I debuted [eatiht](https://github.com/rodricios/eatiht) 
 (a text-extracting library; the predecessor to this algorithm) on [reddit](http://www.reddit.com/r/compsci/comments/2ppyot/just_made_what_i_consider_my_first_algorithm_it/).
-I can only say positiive things about doing so. For one, it's landed me an
+I can only say positive things about doing so. For one, it's landed me an
 opportunity to coauthor a paper with [Tim Weninger](http://www3.nd.edu/~tweninge/). 
 
 It was Tim who introduced me to the *structured [tabular] data extraction*
@@ -577,7 +577,7 @@ The top result is the top bar subreddits. No point in showing that.
 ### More related work
 
 Most work in tabular data extraction focuses mainly on HTML ``<table>`` 
-extraction and processing. For instance, some tables have column of 
+extraction and processing. For instance, some tables have columns of 
 only numerical values. A proper "processing" step would make note of 
 that column's datatype (and possibly coerce the datatype in code).
 
