@@ -8,7 +8,7 @@ A Python implementation of this work can be found on [GitHub](https://github.com
 ---
 
 <figure markdown="1"> 
-![Data extraction at it's root.](http://i.imgur.com/Xfb8zYE.jpg?2 "Maybe I'll find what I need here, no, maybe here?") 
+	![Data extraction at it's root.](http://i.imgur.com/Xfb8zYE.jpg?2 "Maybe I'll find what I need here, no, maybe here?") 
 <figcaption markdown="1"> 
 	*In which one of these books did I leave my favorite bookmark?*, asked nobody, ever.
 </figcaption>
