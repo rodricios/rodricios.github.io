@@ -23,15 +23,15 @@ Just think about how many times you've ran into this type of web-scraping tutori
 download HTML, parse HTML, open dev tools, flip back-and-forth between browser and 
 console, debug your [XPath](http://en.wikipedia.org/wiki/XPath) expressions, etc. 
 
-On the other hand, data extraction via web scraping has seemlessly found its way into
-many larger projects ([Apache Nutch](http://nutch.apache.org/) includes [Tika](http://tika.apache.org/), 
+On the other hand, data extraction via web scraping has seemlessly, and often elegantly,
+found its way into many larger projects ([Apache Nutch](http://nutch.apache.org/) includes [Tika](http://tika.apache.org/), 
 [Scrapy](http://scrapy.org/) with its hybrid scraping/crawling architecture). Needless to
 say, they're designed to give you - the developer, the data scientist, the hacker, the
-one with time to spare - a lot of control, to a fault. Oh, and they give you XPath 
+one with time to spare - a lot of control... But to a fault. Oh, and they give you XPath 
 selection tutorials ([\[1\]](http://tika.apache.org/1.8/examples.html#Fetching_just_certain_bits_of_the_XHTML) 
 [\[2\]](http://doc.scrapy.org/en/0.24/intro/tutorial.html?highlight=data%20extraction#extracting-items)).
 
-In this post, I present a solution to the data extraction problem. It's 
+In this post, I present an informal solution to the data extraction problem. It's 
 short, it's sweet, and it leaves much room for improvement. Enjoy :) 
 
 ## *The algorithm*
