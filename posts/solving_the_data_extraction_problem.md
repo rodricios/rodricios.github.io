@@ -390,6 +390,8 @@ If anyone knows of a similar solution, please let me know in the comments!
 
 Now onto the realm of startups. 
 
+---
+
 ## Closed-source solutions
 
 There's a fair bit of options: 
@@ -425,15 +427,15 @@ My apologies if the lack of sophistication offends anyone.*
 
 *target: [AOL's wikipage](http://en.wikipedia.org/wiki/AOL)*
 
-I'll provide links to each service's request so that you can see the
-results first hand (all but diffbot have url-reachable demos).
+I'll provide permalinks to each service's request so that you can see the
+results first hand. 
 
 #### Diffbot
 
 <figure markdown="1"> 
 	![AOL wiki - diffbot](https://i.imgur.com/MzV1brol.png) 
 	<figcaption markdown="1"> 
-		Ey! They extracted the text!
+		[Test it out.](http://www.diffbot.com/testdrive/?api=article&url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAOL) Ey! They extracted the text!
 	</figcaption>
 </figure>
 
@@ -484,7 +486,7 @@ Second best result:
 	</figcaption>
 </figure>
 
-#### Reddit
+### Reddit
 
 *target: [r/aww](http://www.reddit.com/r/aww)*
 
@@ -550,7 +552,7 @@ The top result is the top bar subreddits. No point in showing that.
 <figure markdown="1"> 
 	![nytimes - diffbot](https://i.imgur.com/uPMKocyl.png) 
 	<figcaption markdown="1"> 
-		Diffbot handles this one well. 
+		[Test it out.](http://www.diffbot.com/testdrive/?api=article&url=http%3A%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html%3Fgwh%3DCEA82EAED8027FA1CE80B287AD63C3D0%26gwt%3Dpay) Diffbot handles this one well. 
 	</figcaption>
 </figure>
 
@@ -651,5 +653,15 @@ addthis_share = {
 
   ga('create', 'UA-59748564-2', 'auto');
   ga('send', 'pageview');
+</script>
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- data extraction -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3083457535008676"
+     data-ad-slot="2540039340"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
 </script>
