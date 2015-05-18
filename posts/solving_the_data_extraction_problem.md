@@ -621,7 +621,7 @@ addthis_share = {
 	passthrough : {
 		twitter: {
 			via: "rodricios",
-			text: "Solving the data extraction problem"
+			text: "Solving #data extraction in #Python"
 		}
 	}
 }
@@ -630,6 +630,17 @@ addthis_share = {
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55562a0c27b23012" async="async"></script>
 
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- data extraction -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3083457535008676"
+     data-ad-slot="2540039340"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
@@ -653,15 +664,4 @@ addthis_share = {
 
   ga('create', 'UA-59748564-2', 'auto');
   ga('send', 'pageview');
-</script>
-
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- data extraction -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3083457535008676"
-     data-ad-slot="2540039340"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
 </script>

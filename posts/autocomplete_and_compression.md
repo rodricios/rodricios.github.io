@@ -1,2 +1,0 @@
-Autocomplete and Compression Algorithms
-===
