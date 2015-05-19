@@ -615,6 +615,7 @@ Not to bash on the merits of the above research, but none of those
 solutions are easily available for the rest of us. 
 
 
+
 <script type="text/javascript">
 var addthis_share = addthis_share || {}
 addthis_share = {
@@ -631,16 +632,6 @@ addthis_share = {
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55562a0c27b23012" async="async"></script>
 
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- data extraction -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-3083457535008676"
-     data-ad-slot="2540039340"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 <div id="disqus_thread"></div>
 <script type="text/javascript">
