@@ -7,10 +7,7 @@ Solving the Data Extraction Problem in 10 lines
 
 ---
 
-<img class="pure-img" src="https://i.imgur.com/Xfb8zYE.jpg?2" alt="Data extraction at it's root" title="Maybe here, no, here? No..."></img>
-<figcaption markdown="1"> 
-	Back then, extracting data was the job of only one person, and that's him right there.
-</figcaption>
+<img class="pure-img" src="https://i.imgur.com/Xfb8zYE.jpg?2" alt="Data extraction at it's root" title="Maybe here, no, here? No... man, they said I'd find Ja Rule's albums here..."></img>
 
 
 In the grand scheme of things, extracting data from the web is a small step in a 
@@ -26,7 +23,7 @@ On the other hand, data extraction via web-scraping has seemlessly, and sometime
 found its way into larger projects ([Apache Nutch](http://nutch.apache.org/) includes [Tika](http://tika.apache.org/), 
 [Scrapy](http://scrapy.org/) has hybrid crawl-n-scrape architecture). Needless to
 say, they're designed to give you - the developer, the data scientist, the hacker, the
-one with time to spare - a lot of control... to a fault. But at leasty they provide XPath
+one with time to spare - a lot of control... to a fault. But at least they provide XPath
  tutorials ([\[1\]](http://tika.apache.org/1.8/examples.html#Fetching_just_certain_bits_of_the_XHTML) 
 [\[2\]](http://doc.scrapy.org/en/0.24/intro/tutorial.html?highlight=data%20extraction#extracting-items)).
 
