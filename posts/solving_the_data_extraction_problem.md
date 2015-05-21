@@ -109,9 +109,7 @@ nothing more than a stylized set of multi-attribute lists or tables.
 Let's get a better picture of what Tim is saying:
 
 <figure markdown="1"> 
-	
-<img class="pure-img" src="https://i.imgur.com/OsA7Iiyl.png" alt="reddit tables" title=""></img>
-
+	<img class="pure-img" src="https://i.imgur.com/OsA7Iiyl.png" alt="reddit tables" title=""></img> 
 	<figcaption markdown="1"> 
 		Websites are like a series of tables...
 	</figcaption> 
@@ -122,18 +120,15 @@ What's highlighted in red is what is meant by *structured* or *tabular data*.
 Since we're dealing with HTML, let's have a look at the underlying markup: 
 
 <figure markdown="1"> 
-
-<img class="pure-img" src="https://i.imgur.com/d3cFlB8l.png" alt="subreddits" title=""></img>
-
+	<img class="pure-img" src="https://i.imgur.com/d3cFlB8l.png" alt="subreddits" title=""></img> 
 	<figcaption markdown="1"> 
 		subreddits - there's a lot of ``li``'s 
 	</figcaption> 
 </figure>
 
 
-<figure markdown="1"> 
-	
-	<img class="pure-img" src="https://i.imgur.com/78rNdf4l.png" alt="top posts" title=""></img>
+<figure markdown="1"> 	
+	<img class="pure-img" src="https://i.imgur.com/78rNdf4l.png" alt="top posts" title=""></img> 
 	<figcaption markdown="1"> 
 		top posts - there's a lot of ``div``'s 
 	</figcaption>
@@ -275,9 +270,7 @@ elements' children:
 So where's that coming from?
 
 <figure markdown="1"> 
-
-	<img class="pure-img" src="https://i.imgur.com/s7W7R4Bl.png" alt="Hidden list of subreddits" title=""></img>
-
+	<img class="pure-img" src="https://i.imgur.com/s7W7R4Bl.png" alt="Hidden list of subreddits" title=""></img> 
 	<figcaption markdown="1"> 
 		Here's where. It's the *MY SUBREDDITS* button.
 	</figcaption>

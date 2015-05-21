@@ -161,33 +161,24 @@ nothing more than a stylized set of multi-attribute lists or tables. </p>
 <h2><em>A wild problem appears!</em></h2>
 <p>Let's get a better picture of what Tim is saying:</p>
 <figure>
-<p><img class="pure-img" src="https://i.imgur.com/OsA7Iiyl.png" alt="reddit tables" title=""></img></p>
-<div class="codehilite"><pre><span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
-    Websites are like a series of tables...
-<span class="nt">&lt;/figcaption&gt;</span>
-</pre></div>
-
-
+<p><img class="pure-img" src="https://i.imgur.com/OsA7Iiyl.png" alt="reddit tables" title=""></img> 
+    <figcaption markdown="1"> 
+        Websites are like a series of tables...
+    </figcaption> </p>
 </figure>
 <p>What's highlighted in red is what is meant by <em>structured</em> or <em>tabular data</em>. </p>
 <p>Since we're dealing with HTML, let's have a look at the underlying markup: </p>
 <figure>
-<p><img class="pure-img" src="https://i.imgur.com/d3cFlB8l.png" alt="subreddits" title=""></img></p>
-<div class="codehilite"><pre><span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
-    subreddits - there&#39;s a lot of ``li``&#39;s 
-<span class="nt">&lt;/figcaption&gt;</span>
-</pre></div>
-
-
+<p><img class="pure-img" src="https://i.imgur.com/d3cFlB8l.png" alt="subreddits" title=""></img> 
+    <figcaption markdown="1"> 
+        subreddits - there's a lot of <code>li</code>'s 
+    </figcaption> </p>
 </figure>
 <figure>
-<div class="codehilite"><pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;pure-img&quot;</span> <span class="na">src=</span><span class="s">&quot;https://i.imgur.com/78rNdf4l.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;top posts&quot;</span> <span class="na">title=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
-<span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
-    top posts - there&#39;s a lot of ``div``&#39;s 
-<span class="nt">&lt;/figcaption&gt;</span>
-</pre></div>
-
-
+<p><img class="pure-img" src="https://i.imgur.com/78rNdf4l.png" alt="top posts" title=""></img> 
+    <figcaption markdown="1"> 
+        top posts - there's a lot of <code>div</code>'s 
+    </figcaption></p>
 </figure>
 <p>Looking at the above pictures, one thing should be clear: although
 <code>&lt;table&gt;</code>'s are the epitome of <strong>tabular data</strong>, there are no 
@@ -307,14 +298,10 @@ elements' children:</p>
 
 <p>So where's that coming from?</p>
 <figure>
-<div class="codehilite"><pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;pure-img&quot;</span> <span class="na">src=</span><span class="s">&quot;https://i.imgur.com/s7W7R4Bl.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Hidden list of subreddits&quot;</span> <span class="na">title=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
-
-<span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
-    Here&#39;s where. It&#39;s the *MY SUBREDDITS* button.
-<span class="nt">&lt;/figcaption&gt;</span>
-</pre></div>
-
-
+<p><img class="pure-img" src="https://i.imgur.com/s7W7R4Bl.png" alt="Hidden list of subreddits" title=""></img> 
+    <figcaption markdown="1"> 
+        Here's where. It's the <em>MY SUBREDDITS</em> button.
+    </figcaption></p>
 </figure>
 <p>Let's print out the text content of the second and third retrieved elements:</p>
 <div class="codehilite"><pre>    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">parents_with_children_counts</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
