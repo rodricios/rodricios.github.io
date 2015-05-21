@@ -73,14 +73,12 @@
         <section class="post">
             <h1>Solving the Data Extraction Problem in 10 lines</h1>
 <h5>By Rodrigo Palacios, follow me on <a href="https://twitter.com/rodricios">twitter</a>, and <a href="https://github.com/rodricios">github</a></h5>
-<p>A Python implementation of this work can be found on <a href="https://github.com/datalib/libextract">GitHub</a>.</p>
+<p><em><a href="https://github.com/datalib/libextract">Libextract</a> - extract data from the web (a Python implementation of this work)</em>.</p>
 <hr />
-<figure>
-<p><img alt="Data extraction at it's root." src="https://i.imgur.com/Xfb8zYEl.jpg?2" title="Maybe here, no, here? No..." /> 
+<p><img class="pure-img" src="https://i.imgur.com/Xfb8zYE.jpg?2" alt="Data extraction at it's root" title="Maybe here, no, here? No..."></img>
 <figcaption markdown="1"> 
     Back then, extracting data was the job of only one person, and that's him right there.
 </figcaption></p>
-</figure>
 <p>In the grand scheme of things, extracting data from the web is a small step in a 
 much larger objective. But in the micro, <em>data extraction</em> appears to us as a problem
 that has no real definitive solution, a sort of <em>dirty job</em> - how often is the task
@@ -88,12 +86,12 @@ relegated as that of "scraping" the web?</p>
 <p>Just think about how many times you've ran into this type of web-scraping tutorial: 
 download HTML, parse HTML, open dev tools, flip back-and-forth between browser and 
 console, debug your <a href="http://en.wikipedia.org/wiki/XPath">XPath</a> expressions, etc. </p>
-<p>On the other hand, data extraction via web scraping has seemlessly, and often elegantly,
+<p>On the other hand, data extraction via web-scraping has seemlessly, and sometimes elegantly,
 found its way into larger projects (<a href="http://nutch.apache.org/">Apache Nutch</a> includes <a href="http://tika.apache.org/">Tika</a>, 
-<a href="http://scrapy.org/">Scrapy</a> with its hybrid scraping/crawling architecture). Needless to
+<a href="http://scrapy.org/">Scrapy</a> has hybrid crawl-n-scrape architecture). Needless to
 say, they're designed to give you - the developer, the data scientist, the hacker, the
-one with time to spare - a lot of control... But to a fault. Oh, and they give you XPath 
-selection tutorials (<a href="http://tika.apache.org/1.8/examples.html#Fetching_just_certain_bits_of_the_XHTML">[1]</a> 
+one with time to spare - a lot of control... to a fault. But at leasty they provide XPath
+ tutorials (<a href="http://tika.apache.org/1.8/examples.html#Fetching_just_certain_bits_of_the_XHTML">[1]</a> 
 <a href="http://doc.scrapy.org/en/0.24/intro/tutorial.html?highlight=data%20extraction#extracting-items">[2]</a>).</p>
 <p>In this post, I present an informal solution to the data extraction problem. It's 
 short, it's sweet, and it leaves much room for improvement. Enjoy :) </p>
@@ -163,24 +161,33 @@ nothing more than a stylized set of multi-attribute lists or tables. </p>
 <h2><em>A wild problem appears!</em></h2>
 <p>Let's get a better picture of what Tim is saying:</p>
 <figure>
-<p><img alt="reddit tables" src="https://i.imgur.com/OsA7Iiyl.png" /> 
-    <figcaption markdown="1"> 
-        Websites are like a series of tables...
-    </figcaption> </p>
+<p><img class="pure-img" src="https://i.imgur.com/OsA7Iiyl.png" alt="reddit tables" title=""></img></p>
+<div class="codehilite"><pre><span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
+    Websites are like a series of tables...
+<span class="nt">&lt;/figcaption&gt;</span>
+</pre></div>
+
+
 </figure>
 <p>What's highlighted in red is what is meant by <em>structured</em> or <em>tabular data</em>. </p>
 <p>Since we're dealing with HTML, let's have a look at the underlying markup: </p>
 <figure>
-<p><img alt="subreddits" src="https://i.imgur.com/d3cFlB8l.png" /> 
-    <figcaption markdown="1"> 
-        subreddits - there's a lot of <code>li</code>'s 
-    </figcaption> </p>
+<p><img class="pure-img" src="https://i.imgur.com/d3cFlB8l.png" alt="subreddits" title=""></img></p>
+<div class="codehilite"><pre><span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
+    subreddits - there&#39;s a lot of ``li``&#39;s 
+<span class="nt">&lt;/figcaption&gt;</span>
+</pre></div>
+
+
 </figure>
 <figure>
-<p><img alt="top posts" src="https://i.imgur.com/78rNdf4l.png" /> 
-    <figcaption markdown="1"> 
-        top posts - there's a lot of <code>div</code>'s 
-    </figcaption></p>
+<div class="codehilite"><pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;pure-img&quot;</span> <span class="na">src=</span><span class="s">&quot;https://i.imgur.com/78rNdf4l.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;top posts&quot;</span> <span class="na">title=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
+<span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
+    top posts - there&#39;s a lot of ``div``&#39;s 
+<span class="nt">&lt;/figcaption&gt;</span>
+</pre></div>
+
+
 </figure>
 <p>Looking at the above pictures, one thing should be clear: although
 <code>&lt;table&gt;</code>'s are the epitome of <strong>tabular data</strong>, there are no 
@@ -300,10 +307,14 @@ elements' children:</p>
 
 <p>So where's that coming from?</p>
 <figure>
-<p><img alt="Hidden list of subreddits" src="https://i.imgur.com/s7W7R4Bl.png" /> 
-    <figcaption markdown="1"> 
-        Here's where. It's the <em>MY SUBREDDITS</em> button.
-    </figcaption></p>
+<div class="codehilite"><pre><span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;pure-img&quot;</span> <span class="na">src=</span><span class="s">&quot;https://i.imgur.com/s7W7R4Bl.png&quot;</span> <span class="na">alt=</span><span class="s">&quot;Hidden list of subreddits&quot;</span> <span class="na">title=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;&lt;/img&gt;</span>
+
+<span class="nt">&lt;figcaption</span> <span class="na">markdown=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span> 
+    Here&#39;s where. It&#39;s the *MY SUBREDDITS* button.
+<span class="nt">&lt;/figcaption&gt;</span>
+</pre></div>
+
+
 </figure>
 <p>Let's print out the text content of the second and third retrieved elements:</p>
 <div class="codehilite"><pre>    <span class="k">for</span> <span class="n">child</span> <span class="ow">in</span> <span class="n">parents_with_children_counts</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]:</span>
@@ -425,20 +436,21 @@ its crawling engine. </p>
 <p>Want to see how each one fares against this algorithm?</p>
 <p><em><strong>Note: the following is not, by any reasonable standard, a "benchmark".</strong> 
 My apologies if the lack of sophistication offends anyone.</em></p>
+<hr />
 <h3>Wikipedia</h3>
 <p><em>target: <a href="http://en.wikipedia.org/wiki/AOL">AOL's wikipage</a></em></p>
 <p>I'll provide permalinks to each service's request so that you can see the
 results first hand. </p>
 <h4>Diffbot</h4>
 <figure>
-<p><img alt="AOL wiki - diffbot" src="https://i.imgur.com/MzV1brol.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/MzV1brol.png" alt="AOL wiki - diffbot" title=""></img> 
     <figcaption markdown="1"> 
         <a href="http://www.diffbot.com/testdrive/?api=article&amp;url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAOL">Test it out.</a> Ey! They extracted the text!
     </figcaption></p>
 </figure>
 <h4>import.io</h4>
 <figure>
-<p><img alt="AOL wiki - import.io" src="https://i.imgur.com/TqHjIxNl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/TqHjIxNl.png" alt="AOL wiki - import.io" title=""></img> 
     <figcaption markdown="1"> 
         <a href="https://magic.import.io/?site=http:%2F%2Fen.wikipedia.org%2Fwiki%2FAOL">Test it out.</a>
         They managed to extract the references at the bottom of the article - but no article.
@@ -446,7 +458,7 @@ results first hand. </p>
 </figure>
 <h4>embed.ly</h4>
 <figure>
-<p><img alt="AOL wiki - embed.ly" src="https://i.imgur.com/7sXC0p6l.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/7sXC0p6l.png" alt="AOL wiki - embed.ly" title=""></img> 
     <figcaption markdown="1"> 
         <a href="http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FAOL">Test it out.</a>
         They provide some pretty useful databites, but not the main content :(
@@ -459,25 +471,26 @@ unstyled HTML of the extracted elements. Or in other words, it's going
 to look ugly.</p>
 <p>Best result: </p>
 <figure>
-<p><img alt="AOL wiki - libextract" src="https://i.imgur.com/sQ5WbCZl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/sQ5WbCZl.png" alt="AOL wiki - libextract" title=""></img> 
     <figcaption markdown="1"> 
         No style is the new style. Here we've extract the references.
     </figcaption></p>
 </figure>
 <p>Second best result:</p>
 <figure>
-<p><img alt="AOL wiki - libextract" src="https://i.imgur.com/PTHYH2rl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/PTHYH2rl.png" alt="AOL wiki - libextract" title=""></img> 
     <figcaption markdown="1"> 
         Here you can see we've extacted the main body of the wiki page. 
         It's clear how awesome it would be to have post-processing, data-cleaning
         steps. Maybe for the next release?
     </figcaption></p>
 </figure>
+<hr />
 <h3>Reddit</h3>
 <p><em>target: <a href="http://www.reddit.com/r/aww">r/aww</a></em></p>
 <h4>import.io</h4>
 <p><figure markdown="1"> 
-    <img alt="r/aww - import.io" src="https://i.imgur.com/f6Qzi6Ll.png" /> 
+    <img class="pure-img" src="https://i.imgur.com/f6Qzi6Ll.png" alt="r/aww - import.io" title=""></img> 
     <figcaption markdown="1"><br />
 <a href="https://magic.import.io/?site=http:%2F%2Fwww.reddit.com%2Fr%2Faww">Test it out.</a>
         Import.io clearly has the upper hand. They elegantly clean the data into a tabular format.
@@ -485,14 +498,14 @@ to look ugly.</p>
 </figure></p>
 <h4>Diffbot</h4>
 <figure>
-<p><img alt="r/aww - diffbot" src="https://i.imgur.com/4b3FBojl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/4b3FBojl.png" alt="r/aww - diffbot" title=""></img> 
     <figcaption markdown="1"> 
         Diffbot results are similar to import.io's, minus the fancy styling.
     </figcaption></p>
 </figure>
 <h4>embed.ly</h4>
 <figure>
-<p><img alt="r/aww - embed.ly" src="https://i.imgur.com/G3tpLnIl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/G3tpLnIl.png" alt="r/aww - embed.ly" title=""></img> 
     <figcaption markdown="1"> 
         <a href="http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fwww.reddit.com%2Fr%2Faww">Test it out.</a>
         Embed.ly extracts the images fine, but nothing close to tabular data.
@@ -501,18 +514,19 @@ to look ugly.</p>
 <h4>libextract</h4>
 <p>Second best result: </p>
 <figure>
-<p><img alt="r/aww - libextract" src="https://i.imgur.com/vLxPJiyl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/vLxPJiyl.png" alt="r/aww - libextract" title=""></img> 
     <figcaption markdown="1"> 
         Like Diffbot and import.io's but absolutely no styling. 
         I never said it would look pretty.
     </figcaption></p>
 </figure>
 <p>The top result is the top bar subreddits. No point in showing that. </p>
+<hr />
 <h3>NYTimes</h3>
 <p><em>target: <a href="http://www.nytimes.com/2015/05/15/business/bird-flu-outbreak-chicken-farmers.html">NYTimes - Dead birds</a></em></p>
 <h4>embed.ly</h4>
 <figure>
-<p><img alt="nytimes - embed.ly" src="https://i.imgur.com/BV4C6Cyl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/BV4C6Cyl.png" alt="nytimes - embed.ly" title=""></img> 
     <figcaption markdown="1"> 
         <a href="http://embed.ly/docs/explore/extract?url=http%3A%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html">Test it out.</a>
         Embed.ly wins this one (at least in terms of presentation), as its "cards" are something not seen in other the other extractors.
@@ -520,14 +534,14 @@ to look ugly.</p>
 </figure>
 <h4>Diffbot</h4>
 <figure>
-<p><img alt="nytimes - diffbot" src="https://i.imgur.com/uPMKocyl.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/uPMKocyl.png" alt="nytimes - diffbot" title=""></img> 
     <figcaption markdown="1"> 
         <a href="http://www.diffbot.com/testdrive/?api=article&amp;url=http%3A%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html%3Fgwh%3DCEA82EAED8027FA1CE80B287AD63C3D0%26gwt%3Dpay">Test it out.</a> Diffbot handles this one well. 
     </figcaption></p>
 </figure>
 <h4>import.io</h4>
 <p><figure markdown="1"> 
-    <img alt="nytimes - import.io" src="https://i.imgur.com/2hFNLeKl.png" /> 
+    <img class="pure-img" src="https://i.imgur.com/2hFNLeKl.png" alt="nytimes - import.io" title=""></img> 
     <figcaption markdown="1"> 
         <a href="https://magic.import.io/?site=http:%2F%2Fwww.nytimes.com%2F2015%2F05%2F15%2Fbusiness%2Fbird-flu-outbreak-chicken-farmers.html">Test it out.</a>
         Import.io is like, <em>meh, just another website for me</em>.
@@ -535,12 +549,13 @@ to look ugly.</p>
 </figure></p>
 <h4>libextract</h4>
 <figure>
-<p><img alt="nytimes - libextract" src="https://i.imgur.com/FsWpOJ5l.png" /> 
+<p><img class="pure-img" src="https://i.imgur.com/FsWpOJ5l.png" alt="nytimes - libextract" title=""></img> 
     <figcaption markdown="1"> 
         That's it, data cleaning (and styling) is libextract's next feature.
     </figcaption></p>
 </figure>
-<h3>More related work</h3>
+<hr />
+<h2>More related work</h2>
 <p>Most work in tabular data extraction focuses mainly on HTML <code>&lt;table&gt;</code> 
 extraction and processing. For instance, some tables have columns of 
 only numerical values. A proper "processing" step would make note of 
