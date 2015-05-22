@@ -1,3 +1,14 @@
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- solve data extraction top bar -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-3083457535008676"
+     data-ad-slot="5795740147"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 Solving the Data Extraction Problem in 10 lines
 ===
 
