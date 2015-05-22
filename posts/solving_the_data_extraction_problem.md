@@ -12,9 +12,13 @@
 Solving the Data Extraction Problem in 10 lines
 ===
 
-#####By Rodrigo Palacios, follow me on [twitter](https://twitter.com/rodricios), and [github](https://github.com/rodricios)
+#####Posted on 5-16-2015 by Rodrigo Palacios. Follow me on [twitter](https://twitter.com/rodricios), and [github](https://github.com/rodricios)
 
 *[Libextract](https://github.com/datalib/libextract) - extract data from the web (a Python implementation of this work)*.
+
+Update May 22, 2015: Thank you all who are visiting for a second time and helped me reach 
+the front page of [r/programming](http://www.reddit.com/r/programming/comments/3664yr/hi_rprogramming_4_months_ago_i_released_a_tiny/)!
+It was a fun experience. Please feel free to share (links on the side) :)
 
 ---
 
