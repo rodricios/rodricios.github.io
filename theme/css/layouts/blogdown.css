@@ -78,7 +78,7 @@ h3 {
 
 .nav-list {
     margin: 0;
-    padding: 0;
+    /*padding: 0;*/
     list-style: none;
 }
 .nav-item {
@@ -315,31 +315,3 @@ input[type="text"].custom-input {
     word-wrap: break-word;
     /*border-bottom: solid 2px #fff;*/
 }
-/*.custom-input input[type="text"] {*/
-/*    background: transparent;*/
-/*    text-align: right;*/
-/*    width: 100%;*/
-/*    border: none;*/
-/*    color: inherit;*/
-/*    word-wrap: break-word;*/
-/*    /*border-bottom: solid 2px #fff;*/*/
-/*    transition: border 0.3s;*/
-/*    /*float: left;*/*/
-/*}*/
-/**/
-/*    .brand-title.custom-input input[type="text"] {*/
-/*        text-transform: uppercase;*/
-/*    }*/
-/**/
-/*    /*.menu-folder.custom-input input[type="text"] {*/*/
-/*    a.custom-input input[type="text"] {*/
-/*        width: 75%;*/
-/*        float: left;*/
-/*    }*/
-/**/
-/**/
-/*.custom-input input[type="text"]:focus,*/
-/*.custom-input input[type="text"].focus {*/
-/*    word-wrap: break-word;*/
-/*    /*border-bottom: solid 2px #fff;*/*/
-/*}*/

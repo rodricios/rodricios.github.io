@@ -1,122 +1,142 @@
-<!--http://bottlepy.org/docs/0.12/stpl.html#embedded-python-code-->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>rodri.cios</title>
+        <title>rod.p</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!--[if lt IE 9]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.2.2/octicons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">-->
-    <!--<link rel="stylesheet" href="css/pure/pure-min.css">-->
-    <link rel="stylesheet" href="/css/pure/pure-min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
 
     <!--[if lte IE 8]>
-        <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-    <![endif]-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-old-ie-min.css">
+        <![endif]-->
     <!--[if gt IE 8]><!-->
-        <link rel="stylesheet" href="/css/layouts/grids-responsive-min.css">
-        <!--<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/grids-responsive-min.css">
     <!--<![endif]-->
     <!--[if lte IE 8]>
-        <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
-    <![endif]-->
+                <link rel="stylesheet" href="css/layouts/blog-old-ie.css">
+        <![endif]-->
     <!--[if gt IE 8]><!-->
     <!--<link rel="stylesheet" href="/css/layouts/blogdown.css">-->
-    <link rel="stylesheet" href="/css/layouts/blogdown.css">
+    <link rel="stylesheet" href="/theme/css/layouts/blogdown.css">
     <!--<![endif]-->
-    
+
     <!--Python syntax highlight-->
-    <link rel="stylesheet" href="/css/layouts/codehilite.css">
-    </head>
-    <body>
-        <div id="layout" class="pure-g">
-            <div class="sidebar pure-u-1 pure-u-md-1-5 pure-u-lg-1-5">
-<div class="header">
-    <h1 class="brand-title">
-        <a href="/">rodri.cios</a>
-    </h1>
-    <nav class="nav">
-        <ul class="nav-list">
-            <li class="nav-item">
-                <a class="pure-button" href="https://github.com/rodricios">GitHub</a>
-            </li>
-            <li class="nav-item">
-                <a class="pure-button" href="/posts">Posts</a>
-            </li>
-            <li class="nav-item">
-                <a class="pure-button" href="/files/CV-RodrigoPalacios.pdf">CV</a>
-            </li>
-        </ul>
-    </nav>
-    <!--% include('nav.html')-->
-    <!--<link rel="stylesheet" href="css/layouts/side-menu.css">-->
-    <!--% include('navmenu.html')-->
-</div>                <!--% include('navmenu.html')-->
-                <!--% include('navmap.html')-->
-            </div>
-            <div class="content pure-u-1 pure-u-md-4-5  pure-u-lg-3-5">
-                <div>
-                    
-<!--DEFAULTS FOR post.html-->
+    <link rel="stylesheet" href="/theme/css/layouts/codehilite.css">
 
-<!-- A wrapper for all the blog posts -->
-<div class="posts">
-    <h1 class="content-subhead"></h1>
+</head>
 
-    <div class="post-description">
-        <section class="post">
-            <h1>Welcome!</h1>
-<p>My full name is Rodrigo Palacios. A mouthful, I know, so I'm o.k.
-with just Rod. I do partime webdev. I'm a CSci undergraduate veering 
-towards natural language processing as well as automatic information
-extraction via unsupervised classification algorithms (currently 
-co-authoring a paper with <a href="http://www3.nd.edu/~tweninge/">Tim Weninger</a>, 
-the topic of which was inspired by an algorithm I posted on 
-<a href="http://www.reddit.com/r/compsci/comments/2ppyot/just_made_what_i_consider_my_first_algorithm_it/">reddit</a>). 
-On my free time, I'm hacking something up, or working on simplifying 
-AI/ML material to an absurdly understandable level.</p>
-<p>You can find my projects on <a href="https://github.com/rodricios"><i class="fa fa-github"></i></a>.
-You can find me on <a href="https://twitter.com/rodricios"><i class="fa fa-twitter"></i></a>.</p>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-59748564-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
-        </section>
+<body id="index" class="home">
+<!--<header id="banner" class="body">
+                <h1><a href="/">rod.p <strong></strong></a></h1>
+        </header> /#banner -->
+<div id="layout" class="pure-g">
+    <div class="sidebar pure-u-1 pure-u-md-1-5 pure-u-lg-1-5">
+        <div class="header">
+            <h1 class="brand-title">
+                <a href="/">rod.p</a>
+            </h1>
+            <nav class="nav">
+                <ul class="nav-list">
+                        <li class="nav-item">
+                                <a class="pure-button" href="/pdf/CV-RodrigoPalaciosv4.pdf">CV</a>
+                        </li>
+                    </li>
+                        <li class="nav-item">
+                                <a class="pure-button" href="/">Home</a>
+                        </li>
+                    </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="https://twitter.com/rodricios/">
+                                <i class="fa fa-twitter"></i>
+                                Twitter</a>
+                        </li>
+                    </li>
+                        <li class="nav-item">
+                            <a class="pure-button" href="https://github.com/rodricios/">
+                                <i class="fa fa-github"></i>
+                                Github</a>
+                        </li>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</div>
+    <div class="content pure-u-1 pure-u-md-4-5  pure-u-lg-3-5">
+        <div>
+<section id="content">
+<h2></h2>
 
-                    <!--% include('posts.html')-->
-<div class="footer">
-    <div class="pure-menu pure-menu-horizontal">
-        <ul>
-            <li class="pure-menu-item">
-                <a class="pure-menu-link" href="/">Home</a>
-            </li>
-            <li class="pure-menu-item">
-                <a class="pure-menu-link" href="https://twitter.com/rodricios/">Twitter</a>
-            </li>
-            <li class="pure-menu-item">
-                <a class="pure-menu-link" href="https://github.com/rodricios/">GitHub</a>
-            </li>
-        </ul>
-    </div>
-</div>
-
+
+        <div class="posts">
+            <h1 class="content-subhead">Post</h1>
+            <article class="hentry">
+                <header>
+                    <h1 class="post-title">
+                        <a href="/2015/how-to-extract-data-from-the-web.html" rel="bookmark"
+                           title="Permalink to Data Extraction in 10 lines of Python">Data Extraction in 10 lines of Python</a>
+                    </h1>
+                </header>
+                <footer class="post-meta">
+                    <abbr class="published" title="2015-05-16T00:00:00-07:00"> Sat 16 May 2015 </abbr>
+                </footer><!-- /.post-info -->
+                    <div class="post-images pure-g">
+                            <div class="pure-u-1">
+                                <a href="http://i.imgur.com/mTnYI6y.jpg?1">
+                                    <img alt="" class="pure-img-responsive" src="http://i.imgur.com/mTnYI6y.jpg?1">
+                                </a>
+                            </div>
+                    </div>
+                <div class="entry-content"> <p>For once, there's too many smart people working on this data extraction problem. Can it be "solved"? Read and find out!</p> </div><!-- /.entry-content -->
+            </article>
+        </div>
+</section><!-- /#content -->
+            <nav id="menu">
+                <ul>
+                </ul>
+            </nav>
+            <div class="footer">
+                <div class="pure-menu pure-menu-horizontal">
+                    <ul>
+                        <li class="pure-menu-item">
+                            <a class="pure-menu-link" href=""></a>
+                        </li>
+
+                    </ul>
                 </div>
             </div>
         </div>
-        <!--<script src="js/ui.js"></script>-->
-    </body>
+    </div>
+
+    <div class="sidebar pure-u-1 pure-u-lg-1-5">
+
+    </div>
+
+</div>
+
+
+<!-- /#menu -->
+
+<!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-59748564-2']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = 'https://ssl.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+<!---->
+</body>
 </html>
