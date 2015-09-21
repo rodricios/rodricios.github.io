@@ -4,21 +4,18 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-	<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-	<url>
-	<loc>http://rodp.me/</loc>
-	<lastmod>2015-09-19T22:49:51+00:00</lastmod>
-	</url>
-	<url>
-	<loc>http://rodp.me/posts/</loc>
-	<lastmod>2015-09-19T22:49:51+00:00</lastmod>
-	</url>
-	<url>
-	<loc>http://rodp.me/files/CV-RodrigoPalacios.pdf</loc>
-	<lastmod>2015-09-19T22:49:51+00:00</lastmod>
-	</url>
-	<url>
-	<loc>http://rodp.me/posts/solving_the_data_extraction_problem.html</loc>
-	<lastmod>2015-09-19T22:49:51+00:00</lastmod>
-	</url>
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://rodp.me/</loc>
+  <lastmod>2015-09-21T00:51:02+00:00</lastmod>
+</url>
+<url>
+  <loc>http://rodp.me/pdf/CV-RodrigoPalaciosv4.pdf</loc>
+  <lastmod>2015-09-21T00:51:02+00:00</lastmod>
+</url>
+<url>
+  <loc>http://rodp.me/2015/how-to-extract-data-from-the-web.html</loc>
+  <lastmod>2015-09-21T00:51:02+00:00</lastmod>
+</url>
 </urlset>
