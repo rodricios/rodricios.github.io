@@ -38,3 +38,8 @@ exclude:
   - Gemfile.lock
   - .git
   - .gitignore
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
