@@ -1,0 +1,106 @@
+<div class="sidebar pure-u-1 pure-u-md-1-5 pure-u-lg-1-5">
+    <div class="header">
+        <h1 class="brand-title">
+            <a href="{{ '/' | relative_url }}">Rodrigo Palacios</a>
+        </h1>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="pure-button" href="{{ '/' | relative_url }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="pure-button" href="{{ '/pdf/CV - Solutions Architect.pdf' | relative_url }}">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="pure-button" href="https://github.com/rodricios/">
+                        <i class="fa fa-github"></i>
+                        Github</a>
+                </li>
+                <li class="nav-item">
+                    <a class="pure-button" href="https://twitter.com/rodricios/">
+                        <i class="fa fa-twitter"></i>
+                        Twitter</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Posts Section -->
+        <div class="sidebar-posts">
+            <button class="posts-toggle" aria-expanded="false">
+                <i class="fa fa-file-text-o"></i> Posts
+                <i class="fa fa-chevron-down toggle-icon"></i>
+            </button>
+            
+            <div class="posts-content">
+                <!-- Category Filters -->
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">All</button>
+                    {% assign all_categories = "" | split: "" %}
+                    {% for post in site.posts %}
+                        {% for cat in post.categories %}
+                            {% unless all_categories contains cat %}
+                                {% assign all_categories = all_categories | push: cat %}
+                            {% endunless %}
+                        {% endfor %}
+                    {% endfor %}
+                    {% assign sorted_categories = all_categories | sort %}
+                    {% for category in sorted_categories %}
+                    <button class="category-btn" data-category="{{ category | slugify }}">{{ category }}</button>
+                    {% endfor %}
+                </div>
+                
+                <!-- Flat Article List -->
+                <ul class="article-list">
+                    {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+                    {% for post in sorted_posts %}
+                    {% capture cat_slugs %}{% for cat in post.categories %}{{ cat | slugify }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+                    <li class="article-item" data-categories="{{ cat_slugs | strip }}">
+                        <a href="{{ post.url | relative_url }}">
+                            <span class="article-title">{{ post.title }}</span>
+                            <span class="article-date">{{ post.date | date: "%b %d, %Y" }}</span>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Category filtering (supports multiple categories per post)
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const articles = document.querySelectorAll('.article-item');
+    
+    categoryBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            const category = this.dataset.category;
+            
+            categoryBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            articles.forEach(article => {
+                const postCategories = article.dataset.categories.split(',');
+                if (category === 'all' || postCategories.includes(category)) {
+                    article.style.display = '';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        });
+    });
+    
+    // Mobile toggle
+    const postsToggle = document.querySelector('.posts-toggle');
+    const postsContent = document.querySelector('.posts-content');
+    
+    if (postsToggle && postsContent) {
+        postsToggle.addEventListener('click', function() {
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
+            postsContent.classList.toggle('expanded');
+        });
+    }
+});
+</script>

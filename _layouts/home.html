@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<section id="content">
+    <h2></h2>
+    
+    <div class="posts">
+        <h1 class="content-subhead">Posts</h1>
+        
+        {% for post in site.posts %}
+        <article class="hentry">
+            <header>
+                <h1 class="post-title">
+                    <a href="{{ post.url | relative_url }}" rel="bookmark"
+                       title="Permalink to {{ post.title }}">{{ post.title }}</a>
+                </h1>
+            </header>
+            <footer class="post-meta">
+                <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%a %d %b %Y" }}
+                </abbr>
+            </footer>
+            {% if post.image %}
+            <div class="post-images pure-g">
+                <div class="pure-u-1">
+                    <a href="{{ post.image }}">
+                        <img alt="{{ post.title }}" class="pure-img-responsive" src="{{ post.image }}">
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+            <div class="entry-content">
+                <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+</section>
