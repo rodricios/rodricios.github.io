@@ -6,7 +6,7 @@ author: Rodrigo Palacios
 image: https://i.imgur.com/mTnYI6y.jpg
 tags: [algorithm, data-extraction, Python]
 categories: [Python, Reddit, Data Extraction]
-excerpt: "For once, there's too many smart people working on this data extraction problem. Can it be 'solved'? Read and find out!"
+excerpt: "Can the data extraction problem be solved in 10 lines of Python? Read and find out!"
 ---
 
 *[Libextract](https://github.com/datalib/libextract) - extract data from the web (a Python implementation of this work)*.
