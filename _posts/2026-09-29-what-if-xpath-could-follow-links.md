@@ -17,6 +17,8 @@ But a website isn't one tree. It's a graph of documents connected by links. XPat
 
 So here's the question behind [wxpath](https://github.com/rodricios/wxpath): **what if the path expression could cross that edge too?**
 
+When I [posted wxpath to Hacker News](https://news.ycombinator.com/item?id=46618472), I said it grew out of about a decade of working on web extraction. Around the time of that 2015 article, I built [eatiht](https://github.com/rodricios/eatiht) and [libextract](https://github.com/datalib/libextract), and helped publish a meta-analysis of scrapers. Those projects leaned heavily on lxml and XPath. Then I spent some time away from writing scrapers. When I came back to this little problem domain, the boundary still bothered me: our selectors knew how to find a node, but the crawl logic that got us to the right document lived somewhere else.
+
 ## A URL as part of the path
 
 I added a `url(...)` operator to an XPath-like expression. A literal URL starts the job:
@@ -34,7 +36,7 @@ The mental model I use in the [language design doc](https://github.com/rodricios
 - XPath chooses things *inside* a document.
 - `url(...)` moves the expression *between* documents.
 
-In other words, I wanted to describe the crawl and the extraction in the same place, instead of writing the control flow first and attaching an XPath expression afterward.
+In other words, I wanted to describe the crawl and the extraction in the same place, instead of writing the control flow first and attaching an XPath expression afterward. As I said in the [HN discussion](https://news.ycombinator.com/item?id=46618472), making this feel like an extension of XPath was a key goal. The syntax should look like it belongs there; the semantics still have to say exactly when a new page is fetched.
 
 ## Let's paginate some quotes
 
@@ -59,6 +61,8 @@ for quote in wxpath.wxpath_async_blocking_iter(expr, max_depth=3):
 
 The first line seeds the crawl. `follow=` says which link to follow on each visited page. The rest says what to extract from each page: find the quote blocks and build a map with an author and text. `max_depth` puts a bound on the traversal.
 
+A reader on HN asked whether `/map` was another wxpath addition, or perhaps an HTML `map` element. It's neither. [Maps are part of XPath 3.1](https://www.w3.org/TR/xpath-31/#id-maps), and they're handy for returning JSON-like records. The new pieces here are `url(...)`, its `follow=` rule, and the `///url(...)` traversal syntax. I wanted to add the missing movement between documents without inventing a whole new language for the data inside them.
+
 There is no handwritten "while next page exists" loop here. The engine schedules requests, deduplicates URLs on a best-effort basis, and yields results as they arrive. Because requests can run concurrently, I wouldn't expect the results to arrive in page order. That's a trade I'd happily make for many extraction jobs.
 
 If you don't need a separate `follow=` rule, `///url(xpath)` is the deep-crawl form: select links on the current page, enqueue them, and repeat on the pages that come back. I call that *recursive* crawling in the design doc, but it isn't a recursive Python function walking depth-first. The engine uses a queue and works breadth-first-ish.
@@ -76,6 +80,8 @@ That rule forced me to be explicit about how XPath pieces join across a `url(...
 wxpath is deterministic in a useful sense: you choose the links and the fields with an expression, and the engine follows those rules. The web itself can still change underneath you. A missing page, a changed layout, or a new pagination pattern can change the result, just as with any crawler.
 
 The current [README](https://github.com/rodricios/wxpath#readme) covers the Python API, CLI, terminal interface, caching, and the more advanced XPath 3.1 features such as maps. It also names the boundaries: no browser-based JavaScript rendering yet, no strict result ordering, and deep crawls still need sensible XPath predicates and depth limits. Don't point `///url(//a/@href)` at the whole web and act surprised when it tries to visit the whole web.
+
+There are good tools around this problem. Scrapy and Crawlee have mature ways to crawl; [Ferret](https://www.montferret.dev/docs/introduction/) and [Xidel](https://github.com/benibela/xidel) explore declarative querying. LLMs can extract information from pages too, though token limits and cost matter when the job gets large. My wager, as I put it on HN, is that XPath remains a resilient selector and processing language. Giving it a way to follow links is an experiment I've wanted to try for a long time.
 
 I like scraping because it sits in an odd place. A page is structured enough that we can query it precisely, but the job surrounding that query is often messy. wxpath is my attempt to make that job expressible: start here, follow *these* links, and give me *this* data.
 
