@@ -1,34 +1,10 @@
 ---
 layout: default
 ---
-<section id="content" class="body">
-    <header>
-        <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}">
-                {{ page.date | date: "%A, %B %-d, %Y" }}
-            </time>
-            {% if page.author %} • {{ page.author }}{% endif %}
-        </p>
-    </header>
-    
-    {% if page.image %}
-    <div class="post-images pure-g">
-        <div class="pure-u-1">
-            <img alt="{{ page.title }}" class="pure-img-responsive" src="{{ page.image }}">
-        </div>
-    </div>
-    {% endif %}
-    
-    <article class="post-content">
-        {{ content }}
-    </article>
-    
-    {% if page.tags.size > 0 %}
-    <div class="post-tags">
-        {% for tag in page.tags %}
-        <span class="post-category">{{ tag }}</span>
-        {% endfor %}
-    </div>
-    {% endif %}
-</section>
+<article class="article container">
+  <a class="back-link" href="{{ '/#writing' | relative_url }}">← Back to writing</a>
+  <header class="article-header"><p class="eyebrow">WRITING <span class="article-separator">/</span> {{ page.date | date: "%B %-d, %Y" }}</p><h1>{{ page.title }}</h1>{% if page.excerpt %}<p class="article-deck">{{ page.excerpt | strip_html }}</p>{% endif %}</header>
+  {% if page.image %}<img class="article-image" src="{{ page.image }}" alt="" loading="lazy">{% endif %}
+  <div class="article-body">{{ content }}</div>
+  <div class="article-end"><span>Thanks for reading.</span><a href="{{ '/#writing' | relative_url }}">More writing ↗</a></div>
+</article>

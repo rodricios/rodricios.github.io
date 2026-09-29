@@ -1,6 +1,6 @@
 # Site settings
 title: Rodrigo Palacios
-description: Personal blog and portfolio
+description: AI engineer and consultant building useful systems across AI, data, and the web.
 url: "https://rodricios.github.io"
 baseurl: ""
 
@@ -8,22 +8,18 @@ baseurl: ""
 markdown: kramdown
 highlighter: rouge
 
-# Kramdown settings
 kramdown:
   input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
     css_class: 'highlight'
 
-# Permalinks
 permalink: /:year/:title.html
 
-# Collections
 collections:
   posts:
     output: true
 
-# Defaults
 defaults:
   - scope:
       path: ""
@@ -31,7 +27,6 @@ defaults:
     values:
       layout: "post"
 
-# Exclude from build
 exclude:
   - README.md
   - Gemfile
@@ -39,7 +34,6 @@ exclude:
   - .git
   - .gitignore
 
-# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

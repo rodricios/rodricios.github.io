@@ -1,22 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 {% include head.html %}
-
-<body id="index" class="home">
-<div id="layout" class="pure-g">
-    {% include sidebar.html %}
-    
-    <div class="content pure-u-1 pure-u-md-4-5 pure-u-lg-3-5">
-        <div>
-            {{ content }}
-            
-            <nav id="menu">
-                <ul></ul>
-            </nav>
-            {% include footer.html %}
-        </div>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="wordmark" href="{{ '/' | relative_url }}" aria-label="Rodrigo Palacios, home">RP<span class="wordmark-dot">.</span></a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/#about' | relative_url }}">About</a>
+        <a href="{{ '/#work' | relative_url }}">Work</a>
+        <a href="{{ '/#writing' | relative_url }}">Writing</a>
+        <a class="nav-contact" href="mailto:rodrigopala91@gmail.com?subject=Let's%20work%20together">Let's talk <span aria-hidden="true">↗</span></a>
+      </nav>
     </div>
-
-</div>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div><a class="footer-name" href="{{ '/' | relative_url }}">Rodrigo Palacios<span>.</span></a><p>Engineering useful things for the web and what comes next.</p></div>
+      <div class="footer-links"><a href="https://github.com/rodricios">GitHub ↗</a><a href="{{ '/pdf/CV - Solutions Architect.pdf' | relative_url }}">Résumé ↗</a><a href="mailto:rodrigopala91@gmail.com">Email ↗</a></div>
+    </div>
+    <div class="container footer-bottom"><span>© {{ site.time | date: '%Y' }} Rodrigo Palacios</span><span>Built with curiosity and care.</span></div>
+  </footer>
 </body>
 </html>

@@ -1,38 +1,22 @@
 ---
 layout: default
 ---
-<section id="content">
-    <h2></h2>
-    
-    <div class="posts">
-        <h1 class="content-subhead">Posts</h1>
-        
-        {% for post in site.posts %}
-        <article class="hentry">
-            <header>
-                <h1 class="post-title">
-                    <a href="{{ post.url | relative_url }}" rel="bookmark"
-                       title="Permalink to {{ post.title }}">{{ post.title }}</a>
-                </h1>
-            </header>
-            <footer class="post-meta">
-                <abbr class="published" title="{{ post.date | date_to_xmlschema }}">
-                    {{ post.date | date: "%a %d %b %Y" }}
-                </abbr>
-            </footer>
-            {% if post.image %}
-            <div class="post-images pure-g">
-                <div class="pure-u-1">
-                    <a href="{{ post.image }}">
-                        <img alt="{{ post.title }}" class="pure-img-responsive" src="{{ post.image }}">
-                    </a>
-                </div>
-            </div>
-            {% endif %}
-            <div class="entry-content">
-                <p>{{ post.excerpt | strip_html | truncatewords: 50 }}</p>
-            </div>
-        </article>
-        {% endfor %}
-    </div>
+<section class="hero container" aria-labelledby="hero-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-dot"></span> AI ENGINEERING · CONSULTING · OPEN SOURCE</p>
+    <h1 id="hero-title">Making complex ideas <em>work</em> in the real world<span class="accent-period">.</span></h1>
+    <p class="hero-lede">I'm Rodrigo Palacios, an engineer working at the intersection of AI, data, and the web. I turn ambiguous problems into useful systems, from early prototypes to production architecture.</p>
+    <div class="hero-actions"><a class="button button-primary" href="mailto:rodrigopala91@gmail.com?subject=Let's%20work%20together">Let's build something <span aria-hidden="true">↗</span></a><a class="text-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"><div class="art-grid"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-orbit orbit-three"></div><div class="art-core"><span>R</span><span>P</span></div><div class="art-label art-label-top">SYSTEMS / 001</div><div class="art-label art-label-bottom">IDEAS → IMPACT</div><div class="art-spark spark-one">✳</div><div class="art-spark spark-two">✳</div></div>
 </section>
+
+<section class="intro-strip" id="about"><div class="container intro-inner"><p class="eyebrow">WHAT I DO</p><p>I design and build <strong>intelligent software</strong> that solves real problems. My background in web data extraction and systems architecture shapes a practical approach to AI: explore boldly, engineer carefully, and make the result usable.</p></div></section>
+
+<section class="section container" id="expertise"><div class="section-heading"><div><p class="eyebrow">HOW I CAN HELP</p><h2>From possibility<br>to product.</h2></div><p>Focused engineering support for teams ready to put ambitious ideas to work.</p></div><div class="service-grid"><article class="service-card"><span class="card-number">01 /</span><div class="service-icon">✳</div><h3>AI engineering</h3><p>Design, prototype, and integrate AI powered features with the right balance of speed, reliability, and human judgment.</p></article><article class="service-card"><span class="card-number">02 /</span><div class="service-icon">⌘</div><h3>Data &amp; automation</h3><p>Turn messy web data and manual workflows into dependable pipelines, tools, and decisions.</p></article><article class="service-card"><span class="card-number">03 /</span><div class="service-icon">↗</div><h3>Technical consulting</h3><p>Get a clear path through architecture decisions, technical discovery, and hands-on implementation.</p></article></div></section>
+
+<section class="work-section" id="work"><div class="container"><div class="section-heading"><div><p class="eyebrow">SELECTED WORK</p><h2>Built to explore.<br>Built to last.</h2></div><p>A few threads that connect my work across web data, developer tools, and research.</p></div><div class="work-list"><a class="work-item" href="https://github.com/rodricios/wxpath"><span class="work-index">01</span><div><h3>wxpath <span aria-hidden="true">↗</span></h3><p>A declarative web crawler that expresses traversal and extraction directly in XPath.</p></div><span class="work-tag">OPEN SOURCE</span></a><a class="work-item" href="https://github.com/datalib/libextract"><span class="work-index">02</span><div><h3>libextract <span aria-hidden="true">↗</span></h3><p>Open source Python tooling for extracting useful content from the web.</p></div><span class="work-tag">DATA EXTRACTION</span></a><a class="work-item" href="https://dl.acm.org/doi/10.1145/2897350.28973530"><span class="work-index">03</span><div><h3>Web content extraction research <span aria-hidden="true">↗</span></h3><p>Co-authored research on the evolution and future of web content extraction.</p></div><span class="work-tag">RESEARCH</span></a></div></div></section>
+
+<section class="section container writing-section" id="writing"><div class="section-heading"><div><p class="eyebrow">THOUGHTS &amp; EXPERIMENTS</p><h2>Notes from<br>the field.</h2></div><p>Ideas, experiments, and practical lessons from building on the web.</p></div><div class="post-grid">{% assign featured_posts = site.posts | where_exp: "post", "post.title" | sort: "date" | reverse %}{% for post in featured_posts limit: 3 %}<a class="post-card" href="{{ post.url | relative_url }}"><span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span><h3>{{ post.title }}</h3><p>{{ post.description | default: post.excerpt | strip_html | truncatewords: 23 }}</p><span class="post-read">Read article <span aria-hidden="true">↗</span></span></a>{% endfor %}</div><div class="writing-all"><h3>All writing</h3><div class="archive-list">{% for post in site.posts %}<a href="{{ post.url | relative_url }}"><span>{{ post.title }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time><span aria-hidden="true">↗</span></a>{% endfor %}</div></div></section>
+
+<section class="contact-section" id="contact"><div class="container contact-inner"><p class="eyebrow">HAVE A PROBLEM WORTH SOLVING?</p><h2>Let's make it <em>happen.</em></h2><p>Whether you're shaping an AI idea or untangling a technical challenge, I'd love to hear about it.</p><a class="button button-light" href="mailto:rodrigopala91@gmail.com?subject=Let's%20work%20together">Start a conversation <span aria-hidden="true">↗</span></a></div></section>
